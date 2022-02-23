@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ChessPieceTest {
+public class ChessPieceTests {
     private class ChessPieceChild extends ChessPiece {
         public ChessPieceChild(ChessPiece[][] board, int row, int col, boolean isWhite) {
             super(board, row, col, isWhite);

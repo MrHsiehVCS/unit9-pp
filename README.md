@@ -141,7 +141,7 @@ The `Chess` class has multiple helper functions already made for you. Use these 
 ## Implementing Chess
 In the `Chess` class, you will implement the following methods: 
 * `void play(Scanner scanner)` - the main game loop. Example output in `ChessExample.txt`
-* `boolean hasWinner()` - returns true if one player does not have any kings left
+* `boolean hasWinner(ChessPiece[][] board)` - a `static` method that returns true if the board only has kings of 1 color. Returns false when the board has both colors of king present.
 
 Implement a `ChessPiece.java`, all the other pieces will inherit from this abstract class.  
 Any functionality that is shared between most of the types of pieces should be placed in this class.  

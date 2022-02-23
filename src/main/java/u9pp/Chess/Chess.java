@@ -14,110 +14,11 @@ public class Chess {
     }
     
     public void play(Scanner scanner) {
-        System.out.println("Welcome to chess!");
-        boolean computerActive = InputHelper.getValidNumberInput(scanner, "Please select a mode. (1) player or (2) player:", 1, 2) == 1;
-        boolean isWhiteTurn = true; 
-        
-        boolean shouldPlay = true;
-        while(shouldPlay) {
-            while(!hasWinner()) {
-                
-                // computer turn
-                if(computerActive && !isWhiteTurn) {
-                    System.out.println(doComputerTurn(isWhiteTurn)); 
-                    isWhiteTurn = !isWhiteTurn;
-                    continue;
-                }
-                else
-                {
-                    displayBoard(true, true);
-                }
-                
-                // player select piece
-                while(true) 
-                {
-                    ChessPiece selectedPiece = null;
-                    int selectedRow = InputHelper.getValidNumberInput(scanner, "Please indicate a piece to move. Row: ", 0, 7);
-                    int selectedCol = InputHelper.getValidNumberInput(scanner, "You have selected row " + selectedRow + ". Col: ", 0, 7);
-                    selectedPiece = board[selectedRow][selectedCol];
-                    
-                    
-                    if(selectedPiece == null) {
-                        System.out.println("You selected an empty square. Please try again.");
-                        continue;
-                    } 
-                    
-                    if(selectedPiece.isWhite() != isWhiteTurn) {
-                        String currColor = "white"; 
-                        String selectedColor = "black";
-                        if(!isWhiteTurn) {
-                            currColor = "black";
-                            selectedColor = "white";
-                        }
-                        System.out.println(String.format("You selected a %s piece, but it is currently %s's turn", selectedColor, currColor));
-                        continue;
-                    }
-                    
-                    System.out.println("You have selected the " + selectedPiece 
-                    + " at [" + selectedRow + "],[" + selectedCol + "]");
-
-
-                    selectedRow = InputHelper.getValidNumberInput(scanner, "Please indicate a square to move to. Row: ", 0, 7);
-                    System.out.println("The selected piece is the " + selectedPiece 
-                    + " at [" + selectedRow + "],[" + selectedCol + "]");
-                    selectedCol = InputHelper.getValidNumberInput(scanner, "You have selected to move to row " + selectedRow + ".\nPlease select a column to move to: ", 0, 7);
-                    if(selectedPiece.canMoveTo(selectedRow, selectedCol)) {
-                        selectedPiece.doMove(selectedRow, selectedCol);
-                        System.out.println("You have moved the " + selectedPiece + " to " +
-                        "[" + selectedRow + "],[" + selectedCol + "]");
-                        break;
-                    } else {
-                        System.out.println("That is an invalid move. Please try again.");
-                        continue;
-                    }
-                }
-                
-                // swap to player 2 (black) 
-                isWhiteTurn = !isWhiteTurn;
-                
-            } // end game loop
-
-            displayBoard(true, true);
-            System.out.println("Game Over!");
-            String winner = "Black";
-            String loser = "White";
-            if(getNumKings(false) == 0) {
-                winner = "White";
-                loser = "Black";
-            }
-            System.out.println(String.format("%s has no more kings left. %s wins.", loser, winner));
-            if(InputHelper.getValidInput(scanner, "Play Again? (Y)es or (N)o:", InputHelper.getValidYesNoInputs()).equals("N")) {
-                shouldPlay = false;
-            } else {
-                initializeBoard();
-                isWhiteTurn = true;
-            }
-        }
-        System.out.println("Thanks for playing!");
-        System.out.println();
+        /* Your code here */
     }
 
-    public boolean hasWinner() {
-        return getNumKings(true) == 0 || getNumKings(false) == 0;
-    }
-
-    private int getNumKings(boolean isWhite) {
-        int count = 0;
-        for(ChessPiece[] row : board) {
-            for(ChessPiece piece : row) {
-                if(piece != null && piece instanceof King) {
-                    if(piece.isWhite == isWhite) {
-                        count++;
-                    }
-                }
-            }
-        }
-        return count;
+    public static boolean hasWinner(ChessPiece[][] board) {
+        /* Your code here */
     }
     
     public void initializeBoard() {
