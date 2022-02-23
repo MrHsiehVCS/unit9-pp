@@ -1,0 +1,40 @@
+This is just an example. 
+Your chess can look different, as long as it gets all the information accross. 
+
+Welcome to u9pp :)
+Available games:  
+1: Monster Fighter
+2: Chess
+Select a game: 2  
+Welcome to chess!
+Please select a mode. (1) player or (2) player:1
+   0 1 2 3 4 5 6 7   
+  +-+-+-+-+-+-+-+-+  
+0 |r|n|b|q|k|b|n|r| 0
+  +-+-+-+-+-+-+-+-+  
+1 |p|p|p|p|p|p|p|p| 1
+  +-+-+-+-+-+-+-+-+  
+2 | | | | | | | | | 2
+  +-+-+-+-+-+-+-+-+  
+3 | | | | | | | | | 3
+  +-+-+-+-+-+-+-+-+  
+4 | | | | | | | | | 4
+  +-+-+-+-+-+-+-+-+  
+5 | | | | | | | | | 5
+  +-+-+-+-+-+-+-+-+
+6 |P|P|P|P|P|P|P|P| 6
+  +-+-+-+-+-+-+-+-+
+7 |R|N|B|Q|K|B|N|R| 7
+  +-+-+-+-+-+-+-+-+
+   0 1 2 3 4 5 6 7
+Please indicate a piece to move. Row: 5
+You have selected row 5. Col: 5
+You selected an empty square. Please try again.
+Please indicate a piece to move. Row: 6
+You have selected row 6. Col: 4
+You have selected the P at [6],[4]
+Please indicate a square to move to. Row: 6
+The selected piece is the P at [6],[4]
+You have selected to move to row 6.
+Please select a column to move to: 4
+That is an invalid move. Please try again.

@@ -1,0 +1,3 @@
+language = "bash"
+run = "mkdir -p ./target && javac -classpath .:/run_dir/junit-4.12.jar:target/dependency/* -d ./target src/main/java/u9pp/*.java && cd ./target && java -classpath .:/run_dir/junit-4.12.jar:target/dependency/* u9pp/Main"
+ignoredPaths=[".git", ".settings", ".gitignore", ".project"]
