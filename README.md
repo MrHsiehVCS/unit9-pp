@@ -17,7 +17,7 @@ First, familiarize yourself with the `Combatant` class.  Make sure you can answe
 * Which of the methods in the class would be useful to me when I am creating a Monster?
 * There is one method that is `private`. Why is this specific method private?
 
-`Monster` is an abstract class, and a child class of `Combatant`.  
+`Monster` is a child class of `Combatant`.  
 Monsters give a certain amount of experience when they die. The experience should be initialized from a parameter in the constructor.   
 The `Monster` constructor should use the constructor of its parent class.   
 `Monster`s should have a `getExpGiven()` method, which returns the amount of exp the monster gives when defeated.  
@@ -128,7 +128,7 @@ The `Chess` class has multiple helper functions already made for you. Use these 
 +-+-+-+-+-+
 | |x| |x| |
 +-+-+-+-+-+    x is a valid move
-|x| | | |x|       
+|x| | | |x|       `
 +-+-+-+-+-+    * is a valid move only when taking
 | | |N| | |       
 +-+-+-+-+-+    o is a valid move only when not taking
