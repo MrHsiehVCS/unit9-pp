@@ -39,8 +39,8 @@ public class PawnTests {
     @Test
     public void Pawn_canMoveOneSpaceForward_returnsTrue(){
         assertAll(
-            () -> assertTrue(board[0][0].canMoveTo(1, 0), "white pawns must be able to move forward 1 square"), 
-            () -> assertTrue(board[7][0].canMoveTo(6, 0), "black pawns must be able to move forward 1 square") 
+            () -> assertTrue(board[0][0].canMoveTo(1, 0), "black pawns must be able to move forward 1 square"), 
+            () -> assertTrue(board[7][0].canMoveTo(6, 0), "white pawns must be able to move forward 1 square") 
         );
     }
 
@@ -50,8 +50,8 @@ public class PawnTests {
         board[6][1] = new Pawn(board, 7, 0, true);
         assertFalse(board[6][1].canMoveTo(7, 1));
         assertAll(
-            () -> assertFalse(board[5][1].canMoveTo(4, 1), "white pawns must not be able to move backward"), 
-            () -> assertFalse(board[6][1].canMoveTo(7, 1), "black pawns must not be able to move backward") 
+            () -> assertFalse(board[5][1].canMoveTo(4, 1), "black pawns must not be able to move backward"), 
+            () -> assertFalse(board[6][1].canMoveTo(7, 1), "false pawns must not be able to move backward") 
         );
     }
 
@@ -68,8 +68,8 @@ public class PawnTests {
     @Test
     public void Pawn_canMoveTwoSpacesFirstTurn_returnsTrue(){
         assertAll(
-            () -> assertTrue(board[0][0].canMoveTo(2, 0), "white pawns must be able to move two spaces on their first turn"), 
-            () -> assertTrue(board[7][0].canMoveTo(5, 0), "black pawns must be able to move two spaces on their first turn") 
+            () -> assertTrue(board[0][0].canMoveTo(2, 0), "black pawns must be able to move two spaces on their first turn"), 
+            () -> assertTrue(board[7][0].canMoveTo(5, 0), "white pawns must be able to move two spaces on their first turn") 
         );
     }
 
@@ -79,8 +79,8 @@ public class PawnTests {
         board[7][0].doMove(6, 0);
       
         assertAll(
-            () -> assertFalse(board[1][0].canMoveTo(3, 0), "white pawns must not be able to move two spaces on their second turn"), 
-            () -> assertFalse(board[6][0].canMoveTo(4, 0), "black pawns must not be able to move two spaces on their second turn") 
+            () -> assertFalse(board[1][0].canMoveTo(3, 0), "black pawns must not be able to move two spaces on their second turn"), 
+            () -> assertFalse(board[6][0].canMoveTo(4, 0), "white pawns must not be able to move two spaces on their second turn") 
         );
     }
 
@@ -129,8 +129,8 @@ public class PawnTests {
     @Test
     public void Pawn_toString_returnsP() {
         assertAll(
-            () -> assertEquals("p", board[0][0].toString(), "toString should return P for white pawn"),
-            () -> assertEquals("P", board[7][0].toString(), "toString should return p for black pawn")
+            () -> assertEquals("p", board[0][0].toString(), "toString should return P for black pawn"),
+            () -> assertEquals("P", board[7][0].toString(), "toString should return p for white pawn")
         );
     }
 }

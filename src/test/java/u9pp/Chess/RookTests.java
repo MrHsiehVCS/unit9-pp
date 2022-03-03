@@ -102,8 +102,8 @@ public class RookTests {
     @Test
     public void Rook_toString_returnsR() {
         assertAll(
-            () -> assertEquals("r", board[0][0].toString(), "toString should return R for white Rook"),
-            () -> assertEquals("R", board[7][0].toString(), "toString should return r for black Rook")
+            () -> assertEquals("r", board[0][0].toString(), "toString should return R for black Rook"),
+            () -> assertEquals("R", board[7][0].toString(), "toString should return r for white Rook")
         );
     }
 

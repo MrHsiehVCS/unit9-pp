@@ -105,7 +105,7 @@ public class KingTests {
         );
     }
 
-    @Test
+    @Test // TODO: consider removing this requirement
     public void King_moveNextToOtherKing_returnsFalse() {
         board[1][2] = new King(board, 1, 2, false);
         assertAll(

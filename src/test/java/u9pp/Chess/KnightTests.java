@@ -138,8 +138,8 @@ public class KnightTests {
     @Test
     public void Knight_toString_returnsK() {
         assertAll(
-            () -> assertEquals("n", board[0][0].toString(), "toString should return N for white Knight"),
-            () -> assertEquals("N", board[7][0].toString(), "toString should return n for black Knight")
+            () -> assertEquals("n", board[0][0].toString(), "toString should return N for black Knight"),
+            () -> assertEquals("N", board[7][0].toString(), "toString should return n for white Knight")
         );
     }
 }

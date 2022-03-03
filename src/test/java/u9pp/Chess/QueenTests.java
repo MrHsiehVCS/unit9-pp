@@ -128,8 +128,8 @@ public class QueenTests {
     @Test
     public void Queen_toString_returnsQ() {
         assertAll(
-            () -> assertEquals("q", board[0][0].toString(), "toString should return Q for white Queen"),
-            () -> assertEquals("Q", board[7][0].toString(), "toString should return q for black Queen")
+            () -> assertEquals("q", board[0][0].toString(), "toString should return Q for black Queen"),
+            () -> assertEquals("Q", board[7][0].toString(), "toString should return q for white Queen")
         );
     }
 

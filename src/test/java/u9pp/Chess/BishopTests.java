@@ -116,8 +116,8 @@ public class BishopTests {
     @Test
     public void Bishop_toString_returnsB() {
         assertAll(
-            () -> assertEquals("b", board[0][0].toString(), "toString should return B for white Bishop"),
-            () -> assertEquals("B", board[7][0].toString(), "toString should return b for black Bishop")
+            () -> assertEquals("b", board[0][0].toString(), "toString should return B for black Bishop"),
+            () -> assertEquals("B", board[7][0].toString(), "toString should return b for white Bishop")
         );
     }
 
